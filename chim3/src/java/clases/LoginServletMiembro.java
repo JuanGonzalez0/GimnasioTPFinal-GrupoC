@@ -37,7 +37,7 @@ public class LoginServletMiembro extends HttpServlet {
                 session.setAttribute("idPersona", idPersona);
                 
                 // Redirige a la página de inicio de progreso.
-                response.sendRedirect("Progreso.jsp");
+                response.sendRedirect("ElegirPlanEntreno.jsp");
             } else {
                 // Usuario no válido, muestra un mensaje de error.
                 PrintWriter out = response.getWriter();

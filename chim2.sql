@@ -30,7 +30,7 @@ CREATE TABLE `historial_progreso` (
   `asistencia` int DEFAULT NULL,
   `fecha_registro` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -39,7 +39,7 @@ CREATE TABLE `historial_progreso` (
 
 LOCK TABLES `historial_progreso` WRITE;
 /*!40000 ALTER TABLE `historial_progreso` DISABLE KEYS */;
-INSERT INTO `historial_progreso` VALUES (1,2,160,7,2,'2023-11-05 20:12:38'),(2,2,700,600,3,'2023-11-05 20:13:46'),(3,1,123,123,33,'2023-11-05 20:51:24'),(4,1,5000,500,2222,'2023-11-06 11:45:14'),(5,4,176,70,1,'2023-11-06 12:07:25'),(6,4,180,80,2,'2023-11-06 12:08:51');
+INSERT INTO `historial_progreso` VALUES (1,2,160,7,2,'2023-11-05 20:12:38'),(2,2,700,600,3,'2023-11-05 20:13:46'),(3,1,123,123,33,'2023-11-05 20:51:24'),(4,1,5000,500,2222,'2023-11-06 11:45:14'),(5,4,176,70,1,'2023-11-06 12:07:25'),(6,4,180,80,2,'2023-11-06 12:08:51'),(7,5,183,90,1,'2023-11-06 16:02:41'),(8,5,183,85,2,'2023-11-06 16:06:43');
 /*!40000 ALTER TABLE `historial_progreso` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -58,7 +58,7 @@ CREATE TABLE `miembro` (
   PRIMARY KEY (`id`),
   KEY `id_persona` (`id_persona`),
   CONSTRAINT `miembro_ibfk_1` FOREIGN KEY (`id_persona`) REFERENCES `persona` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -67,7 +67,7 @@ CREATE TABLE `miembro` (
 
 LOCK TABLES `miembro` WRITE;
 /*!40000 ALTER TABLE `miembro` DISABLE KEYS */;
-INSERT INTO `miembro` VALUES (1,1,'ser roni culeman',1),(2,2,'saslol',0),(3,3,'22',1),(4,4,'estar guigante',1);
+INSERT INTO `miembro` VALUES (1,1,'ser roni culeman',1),(2,2,'saslol',0),(3,3,'22',1),(4,4,'estar guigante',1),(5,5,'bajar de peso',1);
 /*!40000 ALTER TABLE `miembro` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -85,7 +85,7 @@ CREATE TABLE `persona` (
   `genero` enum('Masculino','Femenino','Otro') DEFAULT NULL,
   `contrasena` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -94,7 +94,7 @@ CREATE TABLE `persona` (
 
 LOCK TABLES `persona` WRITE;
 /*!40000 ALTER TABLE `persona` DISABLE KEYS */;
-INSERT INTO `persona` VALUES (1,'juan','gonzalez','Masculino','123'),(2,'josue','bieber','Masculino','321'),(3,'gilberto','sas','Femenino','333'),(4,'Carlos','Rodriguez','Masculino','1234');
+INSERT INTO `persona` VALUES (1,'juan','gonzalez','Masculino','123'),(2,'josue','bieber','Masculino','321'),(3,'gilberto','sas','Femenino','333'),(4,'Carlos','Rodriguez','Masculino','1234'),(5,'damian','olaso','Masculino','12345');
 /*!40000 ALTER TABLE `persona` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -115,7 +115,7 @@ CREATE TABLE `progreso` (
   PRIMARY KEY (`id`),
   KEY `id_persona` (`id_persona`),
   CONSTRAINT `progreso_ibfk_1` FOREIGN KEY (`id_persona`) REFERENCES `persona` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -124,7 +124,7 @@ CREATE TABLE `progreso` (
 
 LOCK TABLES `progreso` WRITE;
 /*!40000 ALTER TABLE `progreso` DISABLE KEYS */;
-INSERT INTO `progreso` VALUES (1,1,170,60,1,'2023-11-05 17:38:23'),(2,1,170,67,2,'2023-11-05 17:39:00'),(3,2,198,2222,1,'2023-11-05 20:09:39'),(4,2,160,7,2,'2023-11-05 20:12:38'),(5,2,700,600,3,'2023-11-05 20:13:46'),(6,2,2312,123123,123,'2023-11-05 20:24:37'),(7,3,2323,2323,232,'2023-11-05 20:26:08'),(8,3,2323,2323,232,'2023-11-05 20:26:24'),(9,3,777,777,777,'2023-11-05 20:26:38'),(10,3,67,45,33,'2023-11-05 20:27:06'),(11,1,123,1231,213,'2023-11-05 20:34:27'),(12,2,213,1231,21313,'2023-11-05 20:34:58'),(13,1,213,213,213,'2023-11-05 20:35:30'),(14,1,170,60,1,'2023-11-05 20:44:44'),(15,1,172,67,2,'2023-11-05 20:45:17'),(16,1,123,123,33,'2023-11-05 20:51:24'),(17,1,5000,500,2222,'2023-11-06 11:45:14'),(18,4,176,70,1,'2023-11-06 12:07:25'),(19,4,180,80,2,'2023-11-06 12:08:51');
+INSERT INTO `progreso` VALUES (1,1,170,60,1,'2023-11-05 17:38:23'),(2,1,170,67,2,'2023-11-05 17:39:00'),(3,2,198,2222,1,'2023-11-05 20:09:39'),(4,2,160,7,2,'2023-11-05 20:12:38'),(5,2,700,600,3,'2023-11-05 20:13:46'),(6,2,2312,123123,123,'2023-11-05 20:24:37'),(7,3,2323,2323,232,'2023-11-05 20:26:08'),(8,3,2323,2323,232,'2023-11-05 20:26:24'),(9,3,777,777,777,'2023-11-05 20:26:38'),(10,3,67,45,33,'2023-11-05 20:27:06'),(11,1,123,1231,213,'2023-11-05 20:34:27'),(12,2,213,1231,21313,'2023-11-05 20:34:58'),(13,1,213,213,213,'2023-11-05 20:35:30'),(14,1,170,60,1,'2023-11-05 20:44:44'),(15,1,172,67,2,'2023-11-05 20:45:17'),(16,1,123,123,33,'2023-11-05 20:51:24'),(17,1,5000,500,2222,'2023-11-06 11:45:14'),(18,4,176,70,1,'2023-11-06 12:07:25'),(19,4,180,80,2,'2023-11-06 12:08:51'),(20,5,183,90,1,'2023-11-06 16:02:41'),(21,5,183,85,2,'2023-11-06 16:06:43');
 /*!40000 ALTER TABLE `progreso` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
@@ -155,4 +155,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-11-06  9:27:43
+-- Dump completed on 2023-11-06 14:14:13

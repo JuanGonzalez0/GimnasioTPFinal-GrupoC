@@ -3,9 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/ET36/Documents/NetBeansProjects/chim3/src/java/clases/EstadisticasServlet.java</file>
-            <file>file:/C:/Users/ET36/Documents/NetBeansProjects/chim3/web/Estadisticas.jsp</file>
+            <file>file:/C:/Users/ET36/Documents/NetBeansProjects/chim3/src/java/clases/PlanEntrenamiento.java</file>
+            <file>file:/C:/Users/ET36/Documents/NetBeansProjects/chim3/web/LoginMiembro.jsp</file>
+            <file>file:/C:/Users/ET36/Documents/NetBeansProjects/chim3/web/ElegirPlanEntreno.jsp</file>
+            <file>file:/C:/Users/ET36/Documents/NetBeansProjects/chim3/src/java/clases/GimnasioServlet.java</file>
             <file>file:/C:/Users/ET36/Documents/NetBeansProjects/chim3/web/index.html</file>
+            <file>file:/C:/Users/ET36/Documents/NetBeansProjects/chim3/src/java/clases/LoginServlet.java</file>
+            <file>file:/C:/Users/ET36/Documents/NetBeansProjects/chim3/src/java/clases/LoginServletMiembro.java</file>
+            <file>file:/C:/Users/ET36/Documents/NetBeansProjects/chim3/web/elegirPlan.jsp</file>
         </group>
     </open-files>
 </project-private>
