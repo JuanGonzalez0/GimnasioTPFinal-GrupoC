@@ -1,2 +1,0 @@
-# GimnasioTPFinal-GrupoC
-hola☻♥♥♥

@@ -3,27 +3,35 @@
     Created on : 6 nov. 2023, 14:02:16
     Author     : ET36
 --%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Elige un Plan de Entrenamiento</title>
+    <title>Lista de Planes de Entrenamiento</title>
 </head>
 <body>
-    <h1>Elige un Plan de Entrenamiento</h1>
-    
-    <form action="Progreso.jsp" method="post">
-        <!-- Genera dinámicamente las opciones de los planes de entrenamiento -->
-        <label for="planSeleccionado">Selecciona un plan:</label>
-        <select name="planSeleccionado" id="planSeleccionado">
-            <c:forEach var="plan" items="${planesEntrenamiento}">
-                <option value="${plan.getNombre()}">${plan.getNombre()}</option>
-            </c:forEach>
-        </select>
-        <input type="submit" value="Elegir Plan">
-    </form>
+    <h1>Lista de Planes de Entrenamiento</h1>
+    <table>
+        <tr>
+            <th>Tipo</th>
+            <th>Descripción</th>
+            <th>Duración</th>
+            <th>Seleccionar</th>
+        </tr>
+        <c:forEach items="${listaPlanes}" var="plan">
+            <tr>
+                <td>${plan.tipo}</td>
+                <td>${plan.descripcion}</td>
+                <td>${plan.tiempoDuracion} minutos</td>
+                <td><a href="Progreso.jsp?tipo=${plan.tipo}">Seleccionar</a></td>
+            </tr>
+        </c:forEach>
+    </table>
 </body>
 </html>
+
 

@@ -13,7 +13,7 @@
 <body>
     <h1>Elige un Plan de Entrenamiento</h1>
     
-    <form action="GimnasioServlet" method="get">
+    <form action="ListaPlanesServlet" method="get">
         <input type="submit" value="Elegir Plan">
     </form>
 </body>

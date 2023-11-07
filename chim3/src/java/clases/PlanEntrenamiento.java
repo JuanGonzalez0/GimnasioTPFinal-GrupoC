@@ -5,38 +5,30 @@
 package clases;
 
 public class PlanEntrenamiento {
-    private String nombre;
+    private String tipo;
     private String descripcion;
-    private int duracion;
+    private int tiempoDuracion; // En minutos
 
-    public PlanEntrenamiento(String nombre, String descripcion, int duracion) {
-        this.nombre = nombre;
+    public PlanEntrenamiento(String tipo, String descripcion, int tiempoDuracion) {
+        this.tipo = tipo;
         this.descripcion = descripcion;
-        this.duracion = duracion;
+        this.tiempoDuracion = tiempoDuracion;
     }
 
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public String getTipo() {
+        return tipo;
     }
 
     public String getDescripcion() {
         return descripcion;
     }
 
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
+    public int getTiempoDuracion() {
+        return tiempoDuracion;
     }
 
-    public int getDuracion() {
-        return duracion;
+    @Override
+    public String toString() {
+        return "Tipo: " + tipo + ", Descripción: " + descripcion + ", Duración: " + tiempoDuracion + " minutos";
     }
-
-    public void setDuracion(int duracion) {
-        this.duracion = duracion;
-    }
-    
 }
