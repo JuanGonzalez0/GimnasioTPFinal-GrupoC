@@ -1,0 +1,49 @@
+DELIMITER //
+CREATE TRIGGER after_insert_miembro
+AFTER INSERT ON miembro FOR EACH ROW
+BEGIN
+  IF NEW.plan_alimentacion = 1 THEN
+    INSERT INTO tiene_plan_alimentacion (id_persona, nombre)
+    SELECT NEW.id_persona, p.nombre
+    FROM persona p
+    WHERE p.id = NEW.id_persona;
+  END IF;
+END;
+//
+DELIMITER ;
+
+DELIMITER //
+CREATE PROCEDURE CalcularPromedioYPlanConNombre()
+BEGIN
+  -- Crea una tabla temporal para almacenar los resultados
+  CREATE TEMPORARY TABLE IF NOT EXISTS temp_results (
+    Miembro_ID INT,
+    Nombre VARCHAR(255),
+    Tiene_Plan TINYINT,
+    Promedio_Peso DOUBLE,
+    Promedio_Altura DOUBLE,
+    Promedio_Asistencia DOUBLE
+  );
+
+  -- Calcula los promedios, el plan de alimentación y el nombre del usuario para cada miembro
+  INSERT INTO temp_results (Miembro_ID, Nombre, Tiene_Plan, Promedio_Peso, Promedio_Altura, Promedio_Asistencia)
+  SELECT
+    m.id AS Miembro_ID,
+    p.nombre AS Nombre,
+    m.plan_alimentacion AS Tiene_Plan,
+    AVG(pr.peso) AS Promedio_Peso,
+    AVG(pr.altura) AS Promedio_Altura,
+    AVG(pr.asistencia) AS Promedio_Asistencia
+  FROM miembro m
+  LEFT JOIN progreso pr ON m.id = pr.id_persona
+  LEFT JOIN persona p ON m.id_persona = p.id
+  GROUP BY m.id;
+  
+  -- Devuelve los resultados almacenados en la tabla temporal
+  SELECT * FROM temp_results;
+  
+  -- Limpia la tabla temporal
+  DROP TEMPORARY TABLE IF EXISTS temp_results;
+  
+END //
+DELIMITER ;
