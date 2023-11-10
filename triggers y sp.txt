@@ -13,6 +13,7 @@ END;
 DELIMITER ;
 
 DELIMITER //
+
 CREATE PROCEDURE CalcularPromedioYPlanConNombre()
 BEGIN
   -- Crea una tabla temporal para almacenar los resultados
@@ -31,13 +32,11 @@ BEGIN
     m.id AS Miembro_ID,
     p.nombre AS Nombre,
     m.plan_alimentacion AS Tiene_Plan,
-    AVG(pr.peso) AS Promedio_Peso,
-    AVG(pr.altura) AS Promedio_Altura,
-    AVG(pr.asistencia) AS Promedio_Asistencia
+    COALESCE((SELECT AVG(pr.peso) FROM progreso pr WHERE pr.id_persona = p.id ORDER BY pr.fecha_registro DESC LIMIT 1), 0) AS Promedio_Peso,
+    COALESCE((SELECT AVG(pr.altura) FROM progreso pr WHERE pr.id_persona = p.id ORDER BY pr.fecha_registro DESC LIMIT 1), 0) AS Promedio_Altura,
+    COALESCE((SELECT AVG(pr.asistencia) FROM progreso pr WHERE pr.id_persona = p.id ORDER BY pr.fecha_registro DESC LIMIT 1), 0) AS Promedio_Asistencia
   FROM miembro m
-  LEFT JOIN progreso pr ON m.id = pr.id_persona
-  LEFT JOIN persona p ON m.id_persona = p.id
-  GROUP BY m.id;
+  LEFT JOIN persona p ON m.id_persona = p.id;
   
   -- Devuelve los resultados almacenados en la tabla temporal
   SELECT * FROM temp_results;
@@ -46,4 +45,6 @@ BEGIN
   DROP TEMPORARY TABLE IF EXISTS temp_results;
   
 END //
+
 DELIMITER ;
+
