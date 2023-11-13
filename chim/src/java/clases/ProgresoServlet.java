@@ -49,9 +49,8 @@ public class ProgresoServlet extends HttpServlet {
             e.printStackTrace(); // Manejo de errores
         }
 
-        // Redirigir a la vista de progreso
-        PrintWriter out = response.getWriter();
-        out.println("Datos Guardados");
+        // Redirigir a la vista principal
+        response.sendRedirect("index.html");
     }
 }
 

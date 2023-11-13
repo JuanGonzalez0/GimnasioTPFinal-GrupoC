@@ -10,7 +10,7 @@
 <html>
 <head>
     <title>Iniciar sesión</title>
-    <link rel="stylesheet" href="styles.css"/>
+    <link rel="stylesheet" href="LoginMiembro.css"/>
 </head>
 <body>
     <div class="contenedor">

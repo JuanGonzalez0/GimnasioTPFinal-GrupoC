@@ -7,16 +7,11 @@ body{
     background-size: contain;
     justify-content: center;
     align-items: center;
+
 }
 
 
-body::before{
-    content: "";
-    inset: 0;
-    z-index: -1;
-    position: absolute;
-    backdrop-filter: blur(4px);
-}
+
 
 h1{
     text-align: center;
@@ -36,20 +31,20 @@ h1{
 }
 
 input{
-    width: 160px;
-    height: 30px;
-    margin-bottom: 2rem;
+    width: 200px;
+    height: 40px;
     border-radius: 10px;
     border: solid 2px bolder; 
     background-color: #cccccc;
-    justify-content: center;
-    text-align: center;
-  
     
 }
-
+.pagina{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
 .contenedor{
-    background-color: white;
+    background-color: #cccccc;
     border-radius: 10px;
     justify-content: center;
     align-items: center;
@@ -59,5 +54,6 @@ input{
     height: 600px;
     margin-top: 10px;
     gap: 2rem;
+    
 }
 

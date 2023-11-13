@@ -10,8 +10,11 @@
 <html>
 <head>
   <title>Modificar descripción</title>
+  <link rel="stylesheet" href="modificar.css"/>
 </head>
     <body>
+        
+        <h1>Modificar Plan:</h1>
         <form action="modificar.jsp" method="post">
           <input type="hidden" name="id" value="<%= request.getParameter("id") %>">
           <input type="text" name="descripcion" value="<%= request.getParameter("descripcion") %>">

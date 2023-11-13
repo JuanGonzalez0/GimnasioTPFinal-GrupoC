@@ -9,9 +9,10 @@
 <html>
 <head>
     <title>Registro de Datos de Miembro</title>
-    <link rel="stylesheet" href="styles.css"/>
+    <link rel="stylesheet" href="formularioDatosMiembro.css"/>
 </head>
 <body>
+    <div class="pagina">
     <div class="contenedor">
     <h1>Registro de Datos de Miembro</h1>
     <form action="GuardarDatosMiembroServlet" method="post">
@@ -23,6 +24,7 @@
 
         <input type="submit" value="Registrar Datos de Miembro">
     </form>
+    </div>
     </div>
 </body>
 </html>

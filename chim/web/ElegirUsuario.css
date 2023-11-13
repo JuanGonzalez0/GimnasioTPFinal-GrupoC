@@ -1,0 +1,68 @@
+body {
+    background-image: url("LightWeight.jpg");
+    background-size: 100vh;
+    display: flex;
+    height: 90vh;
+    object-fit: contain;
+    background-size: contain;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor{
+    background-color: #cccccc;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    height: 600px;
+    margin-top: 10px;
+    gap: 2rem;
+    
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input[type="text"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.pagina{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}

@@ -16,6 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import clases.Miembro;
 import conexion.ConexionMySQL;
+import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpSession;
 
@@ -39,9 +40,12 @@ public class GuardarDatosMiembroServlet extends HttpServlet {
             if (guardarDatosMiembroEnBaseDeDatos(miembro)) {
                 // Redirige a una página de confirmación si la operación de guardado fue exitosa
                 System.out.println("se registro");
+                response.sendRedirect("index.html");
             } else {
                 // Maneja el error, por ejemplo, muestra un mensaje de error al usuario
                 System.out.println("no se registro");
+                PrintWriter out = response.getWriter();
+                out.println("hubo un error en el registro");
             }
         }
     }

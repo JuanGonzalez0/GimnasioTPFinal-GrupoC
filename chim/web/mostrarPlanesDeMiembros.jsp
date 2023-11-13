@@ -11,9 +11,11 @@
 <html>
 <head>
   <title>Listar datos</title>
+  <link rel="stylesheet" href="mostrarPlanesDeMiembro.css"/>
 </head>
 <body>
 
+ <h1>Planes: </h1>
 <table border="1">
   <tr>
     <th>Nombre</th>

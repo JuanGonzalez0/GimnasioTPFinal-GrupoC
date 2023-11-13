@@ -14,6 +14,7 @@
 <html>
 <head>
   <title>Modificar descripción</title>
+  <link rel="stylesheet" href="mostrarPlanAlimentacion.css"/>
 </head>
     <body>
         <table border="1">

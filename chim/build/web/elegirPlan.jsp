@@ -12,6 +12,7 @@
 <html>
 <head>
     <title>Lista de Planes de Entrenamiento</title>
+    <link rel="stylesheet" href="elegirPlan.css"/>
 </head>
 <body>
     <h1>Lista de Planes de Entrenamiento</h1>

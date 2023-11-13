@@ -9,18 +9,21 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="ElegirUsuario.css"/>
         <title>JSP Page</title>
-        <link rel="stylesheet" href="styles.css"/>
     </head>
     <body>
-        <div class="contenedor">
-        <h1>¿Quien es usted?</h1>
-        <form action="LoginMiembro.jsp" method="post">
-            <input type="submit" value="Miembro">
-        </form>
-        <form action="LoginNutri.jsp" method="post">
-            <input type="submit" value="Nutricionista">
-        </form>
+
+        <div class="pagina">
+            <div class="contenedor">
+                <h1>¿Quien es usted?</h1>
+                <form action="LoginMiembro.jsp" method="post">
+                    <input type="submit" value="Miembro">
+                </form>
+                <form action="LoginNutri.jsp" method="post">
+                    <input type="submit" value="Nutricionista">
+                </form>
+            </div>
         </div>
-    </body>
+</body>
 </html>

@@ -9,9 +9,10 @@
 <html>
 <head>
     <title>Iniciar sesión</title>
-    <link rel="stylesheet" href="styles.css"/>
+    <link rel="stylesheet" href="LoginNutri.css"/>
 </head>
 <body>
+    <div class="pagina">
     <div class="contenedor">
     <h1>Iniciar sesión</h1>
     <form action="LoginServlet" method="post">
@@ -23,6 +24,8 @@
         
         <input type="submit" value="Iniciar sesión">
     </form>
+    </div>
+        
     </div>
 </body>
 </html>
