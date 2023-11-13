@@ -10,17 +10,22 @@
 <html>
 <head>
     <title>Iniciar sesión</title>
+    <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-    <h1>Iniciar sesión</h1>
-    <form action="LoginServletMiembro" method="post">
-        <label for="username">Nombre de usuario:</label>
-        <input type="text" name="username" required><br>
-        
-        <label for="password">Contraseña:</label>
-        <input type="password" name="password" required><br>
-        
-        <input type="submit" value="Iniciar sesión">
-    </form>
+    <div class="contenedor">
+
+
+        <h1>Iniciar sesión</h1>
+        <form action="LoginServletMiembro" method="post">
+            <label for="username">Nombre de usuario:</label>
+            <input type="text" name="username" required><br>
+
+            <label for="password">Contraseña:</label>
+            <input type="password" name="password" required><br>
+
+            <input type="submit" value="Iniciar sesión">
+        </form>
+    </div>
 </body>
 </html>

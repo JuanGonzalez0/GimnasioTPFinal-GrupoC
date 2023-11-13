@@ -9,8 +9,10 @@
 <html>
 <head>
     <title>Formulario de Registro</title>
+    <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
+    <div class="contenedor">
     <h1>Registro</h1>
     <form action="RegistroServlet" method="post">
         <label for="nombre">Nombre:</label>
@@ -30,6 +32,7 @@
         <input type="password" id="contrasena" name="contrasena" required><br><br>
 
         <input type="submit" value="Registrar">
+        </div>
     </form>
 </body>
 </html>

@@ -9,8 +9,10 @@
 <html>
 <head>
     <title>Iniciar sesión</title>
+    <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
+    <div class="contenedor">
     <h1>Iniciar sesión</h1>
     <form action="LoginServlet" method="post">
         <label for="username">Nombre de usuario:</label>
@@ -21,6 +23,7 @@
         
         <input type="submit" value="Iniciar sesión">
     </form>
+    </div>
 </body>
 </html>
 

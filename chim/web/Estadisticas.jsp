@@ -5,6 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Resumen de Miembros</title>
+    <link rel="stylesheet" href="Estadistica.css"/>
 </head>
 <body>
     <h1>Resumen de Miembros</h1>

@@ -10,14 +10,17 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
+        <link rel="stylesheet" href="styles.css"/>
     </head>
     <body>
-        <h1>Quien es usted?</h1>
+        <div class="contenedor">
+        <h1>¿Quien es usted?</h1>
         <form action="LoginMiembro.jsp" method="post">
             <input type="submit" value="Miembro">
         </form>
         <form action="LoginNutri.jsp" method="post">
             <input type="submit" value="Nutricionista">
         </form>
+        </div>
     </body>
 </html>

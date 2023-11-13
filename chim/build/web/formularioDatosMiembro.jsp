@@ -9,8 +9,10 @@
 <html>
 <head>
     <title>Registro de Datos de Miembro</title>
+    <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
+    <div class="contenedor">
     <h1>Registro de Datos de Miembro</h1>
     <form action="GuardarDatosMiembroServlet" method="post">
         <label for="objetivo">Objetivo de Fitness:</label>
@@ -21,6 +23,7 @@
 
         <input type="submit" value="Registrar Datos de Miembro">
     </form>
+    </div>
 </body>
 </html>
 

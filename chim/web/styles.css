@@ -1,0 +1,63 @@
+body{
+    background-image: url("LightWeight.jpg");
+    background-size: 100vh;
+    display: flex;
+    height: 90vh;
+    object-fit: contain;
+    background-size: contain;
+    justify-content: center;
+    align-items: center;
+}
+
+
+body::before{
+    content: "";
+    inset: 0;
+    z-index: -1;
+    position: absolute;
+    backdrop-filter: blur(4px);
+}
+
+h1{
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 50px;
+}
+
+.boton{
+    color: white;
+    background-color: black;
+    border: none;
+    width: 100px;
+    height: 50px;
+    margin-top: 2.5rem;
+    border-radius: 10px;
+    transition: all 400ms ease;
+}
+
+input{
+    width: 160px;
+    height: 30px;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    border: solid 2px bolder; 
+    background-color: #cccccc;
+    justify-content: center;
+    text-align: center;
+  
+    
+}
+
+.contenedor{
+    background-color: white;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    height: 600px;
+    margin-top: 10px;
+    gap: 2rem;
+}
+
